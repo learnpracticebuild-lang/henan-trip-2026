@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>豫见中原 · 河南四日行程 · 2026.05</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy-deep: #0a1628;
+  --navy: #122845;
+  --navy-mid: #1e3a5f;
+  --navy-light: #2c4a73;
+  --gold: #c9a961;
+  --gold-bright: #e6c878;
+  --gold-deep: #8a7340;
+  --cream: #f5ecd9;
+  --cream-soft: #ebe0c5;
+  --paper: #f8f3e6;
+  --ink: #1a1a1a;
+  --ink-soft: #3d3d3d;
+  --red-seal: #a8332e;
+  --jade: #4a7268;
+  --shadow-soft: 0 4px 20px rgba(10,22,40,0.08);
+  --shadow-medium: 0 8px 40px rgba(10,22,40,0.15);
+  --shadow-deep: 0 16px 60px rgba(10,22,40,0.25);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Serif SC', 'Songti SC', serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.7;
+  font-size: 16px;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(201,169,97,0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(18,40,69,0.03) 0%, transparent 50%);
+  min-height: 100vh;
+}
+
+/* ============ Navigation Top Bar ============ */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(248,243,230,0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201,169,97,0.2);
+  padding: 12px 0;
+}
+
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: var(--navy);
+}
+
+.topbar-brand .accent { color: var(--gold-deep); }
+
+.topbar-nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.topbar-nav a {
+  text-decoration: none;
+  color: var(--navy-mid);
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
+}
+
+.topbar-nav a:hover {
+  background: var(--navy);
+  color: var(--gold-bright);
+}
+
+.topbar-progress {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--gold-deep);
+  white-space: nowrap;
+}
+
+/* ============ Hero ============ */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 50%, var(--navy-mid) 100%);
+  color: var(--cream);
+  padding: 80px 24px 100px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 30%, rgba(201,169,97,0.15) 0%, transparent 40%),
+    radial-gradient(circle at 75% 70%, rgba(201,169,97,0.08) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-meta {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--gold-bright);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-meta::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: var(--gold-bright);
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.hero-title-cn {
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--gold-bright);
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  font-weight: 300;
+  max-width: 700px;
+  color: rgba(245,236,217,0.8);
+  margin-bottom: 48px;
+  line-height: 1.8;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 32px;
+  max-width: 800px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(201,169,97,0.25);
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--gold-bright);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.hero-stat-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: rgba(245,236,217,0.6);
+  text-transform: uppercase;
+}
+
+/* ============ Container ============ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============ Section ============ */
+section {
+  padding: 80px 0;
+}
+
+.section-header {
+  margin-bottom: 56px;
+  position: relative;
+}
+
+.section-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--gold-deep);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-num::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold-deep);
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.section-title-cn {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.3em;
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+
+/* ============ Day Card ============ */
+.day-card {
+  background: white;
+  border: 1px solid rgba(201,169,97,0.25);
+  border-radius: 2px;
+  margin-bottom: 32px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.day-card:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.day-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold) 0%, var(--gold-deep) 100%);
+}
+
+.day-header {
+  padding: 32px 40px 24px 44px;
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-mid) 100%);
+  color: var(--cream);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.day-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.3'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.day-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--gold-bright);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.day-date {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 6px 0;
+}
+
+.day-theme {
+  font-size: 0.95rem;
+  color: rgba(245,236,217,0.85);
+  letter-spacing: 0.05em;
+}
+
+.day-route {
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+.day-route-label {
+  color: var(--gold-bright);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 4px;
+}
+
+.day-route-line {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.day-body {
+  padding: 32px 40px 40px 44px;
+}
+
+/* ============ Timeline ============ */
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 70px;
+  top: 12px;
+  bottom: 12px;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(201,169,97,0.4) 10%, rgba(201,169,97,0.4) 90%, transparent);
+}
+
+.event {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  padding: 16px 0;
+  position: relative;
+  align-items: start;
+}
+
+.event-time {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--navy);
+  text-align: right;
+  padding-top: 4px;
+  position: relative;
+}
+
+.event-time::after {
+  content: '';
+  position: absolute;
+  right: -16px;
+  top: 12px;
+  width: 9px;
+  height: 9px;
+  background: var(--gold);
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px var(--gold);
+  z-index: 2;
+}
+
+.event.event-key .event-time::after {
+  background: var(--red-seal);
+  box-shadow: 0 0 0 2px var(--red-seal);
+}
+
+.event-content {
+  padding-left: 16px;
+}
+
+.event-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin-bottom: 4px;
+  letter-spacing: 0.02em;
+}
+
+.event-title .badge {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  background: var(--gold-deep);
+  color: var(--cream);
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-left: 8px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.event-title .badge.key { background: var(--red-seal); }
+.event-title .badge.food { background: var(--jade); }
+.event-title .badge.must { background: var(--navy); }
+
+.event-detail {
+  font-size: 0.93rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+.event-meta {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--gold-deep);
+  margin-top: 4px;
+  letter-spacing: 0.05em;
+}
+
+.event-meta span {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+/* ============ Info Boxes ============ */
+.info-box {
+  background: var(--cream);
+  border-left: 3px solid var(--gold);
+  padding: 20px 24px;
+  margin: 16px 0 16px 96px;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.info-box-title {
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.1em;
+}
+
+.warn-box {
+  background: #fdf2e9;
+  border-left: 3px solid var(--red-seal);
+}
+.warn-box .info-box-title { color: var(--red-seal); }
+
+/* ============ Checklist Section ============ */
+.checklist-section {
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.checklist-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='nb'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23nb)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.checklist-section .section-num { color: var(--gold-bright); }
+.checklist-section .section-num::before { background: var(--gold-bright); }
+.checklist-section .section-title { color: var(--cream); }
+.checklist-section .section-title-cn { color: rgba(245,236,217,0.6); }
+
+.progress-bar-container {
+  margin: 40px 0;
+  background: rgba(255,255,255,0.05);
+  padding: 24px 32px;
+  border-radius: 4px;
+  border: 1px solid rgba(201,169,97,0.25);
+  position: relative;
+  z-index: 1;
+}
+
+.progress-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.progress-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--cream);
+}
+
+.progress-text strong {
+  color: var(--gold-bright);
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright));
+  width: 0%;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.checklist-group {
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.checklist-group-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  color: var(--gold-bright);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.checklist-group-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(201,169,97,0.2);
+}
+
+.checklist-group-sub {
+  font-size: 0.85rem;
+  color: rgba(245,236,217,0.55);
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+}
+
+.checklist-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px 20px;
+  margin-bottom: 8px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,169,97,0.12);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.checklist-item:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(201,169,97,0.3);
+}
+
+.checklist-item.completed {
+  background: rgba(201,169,97,0.08);
+  border-color: rgba(201,169,97,0.4);
+}
+
+.checklist-item.completed .checklist-text {
+  text-decoration: line-through;
+  color: rgba(245,236,217,0.4);
+}
+
+.checklist-checkbox {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid var(--gold-deep);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  margin-top: 2px;
+  background: transparent;
+}
+
+.checklist-item.completed .checklist-checkbox {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.checklist-checkbox::after {
+  content: '';
+  width: 6px;
+  height: 11px;
+  border-right: 2px solid var(--navy-deep);
+  border-bottom: 2px solid var(--navy-deep);
+  transform: rotate(45deg) translate(-1px, -1px);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.checklist-item.completed .checklist-checkbox::after {
+  opacity: 1;
+}
+
+.checklist-content {
+  flex: 1;
+}
+
+.checklist-text {
+  font-size: 0.95rem;
+  color: var(--cream);
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.checklist-meta {
+  display: flex;
+  gap: 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: rgba(201,169,97,0.7);
+  letter-spacing: 0.05em;
+  flex-wrap: wrap;
+}
+
+.checklist-meta .deadline {
+  color: var(--gold-bright);
+}
+
+.checklist-meta .priority-high { color: #ff8c69; }
+
+.priority-tag {
+  display: inline-block;
+  padding: 1px 8px;
+  font-size: 0.65rem;
+  border-radius: 2px;
+  margin-right: 8px;
+  letter-spacing: 0.1em;
+  font-family: 'DM Mono', monospace;
+  text-transform: uppercase;
+}
+
+.priority-urgent {
+  background: var(--red-seal);
+  color: var(--cream);
+}
+
+.priority-soon {
+  background: var(--gold-deep);
+  color: var(--cream);
+}
+
+.priority-normal {
+  background: var(--navy-light);
+  color: var(--cream);
+}
+
+.reset-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  padding: 8px 20px;
+  background: transparent;
+  color: rgba(245,236,217,0.6);
+  border: 1px solid rgba(201,169,97,0.3);
+  border-radius: 3px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  cursor: pointer;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.reset-btn:hover {
+  background: rgba(201,169,97,0.1);
+  color: var(--gold-bright);
+  border-color: var(--gold-bright);
+}
+
+/* ============ Cards Grid (Food / Tips) ============ */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.tip-card {
+  background: white;
+  padding: 28px 32px;
+  border: 1px solid rgba(201,169,97,0.2);
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.tip-card-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.tip-card-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.tip-card-text {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+/* ============ Quick Reference Footer ============ */
+.quick-ref {
+  background: var(--cream);
+  padding: 60px 24px;
+  border-top: 4px solid var(--gold);
+}
+
+.quick-ref-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.quick-ref-item h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--navy);
+  margin-bottom: 16px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(201,169,97,0.3);
+  padding-bottom: 8px;
+}
+
+.quick-ref-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-ref-item li {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  padding: 4px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.quick-ref-item li strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.quick-ref-item li .ref-val {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--gold-deep);
+}
+
+/* ============ Footer ============ */
+footer {
+  background: var(--navy-deep);
+  color: rgba(245,236,217,0.5);
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.1em;
+}
+
+footer .seal {
+  display: inline-block;
+  margin: 0 8px;
+  color: var(--red-seal);
+  font-size: 1rem;
+}
+
+/* ============ Mobile ============ */
+@media (max-width: 768px) {
+  .hero { padding: 60px 24px 80px; }
+  section { padding: 56px 0; }
+  .day-header { padding: 24px 24px 20px 28px; }
+  .day-body { padding: 24px 20px 32px 24px; }
+  .day-route { text-align: left; width: 100%; }
+  .timeline::before { left: 50px; }
+  .event { grid-template-columns: 60px 1fr; gap: 16px; }
+  .event-time { font-size: 0.78rem; }
+  .event-content { padding-left: 12px; }
+  .info-box { margin-left: 76px; padding: 16px 20px; }
+  .topbar-inner { flex-wrap: wrap; }
+  .topbar-nav { font-size: 0.78rem; }
+  .topbar-progress { font-size: 0.7rem; width: 100%; text-align: center; padding-top: 4px; border-top: 1px solid rgba(201,169,97,0.15); }
+  .checklist-group-title { font-size: 1.3rem; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  .hero-title { font-size: 2.5rem; }
+  .hero-title-cn { font-size: 1.8rem; }
+  .day-date { font-size: 1.8rem; }
+  .info-box { margin-left: 60px; }
+  .timeline::before { left: 38px; }
+  .event { grid-template-columns: 48px 1fr; gap: 12px; }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@for $i from 1 through 10 {
+  .fade-in:nth-child(#{$i}) { animation-delay: #{$i * 0.1}s; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ Top Navigation ============ -->
+<nav class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-brand">
+      <span class="accent">豫</span>&nbsp;HENAN · 2026
+    </div>
+    <div class="topbar-nav">
+      <a href="#hero">封面</a>
+      <a href="#overview">总览</a>
+      <a href="#day1">D1</a>
+      <a href="#day2">D2</a>
+      <a href="#day3">D3</a>
+      <a href="#day4">D4</a>
+      <a href="#checklist">待办</a>
+      <a href="#reference">速查</a>
+    </div>
+    <div class="topbar-progress" id="topbar-progress">
+      待办: 0 / 14
+    </div>
+  </div>
+</nav>
+
+<!-- ============ Hero ============ -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-meta">2026.05.03 — 05.07 · 一家三口</div>
+    <h1 class="hero-title">Henan,<br><em>Re-imagined</em></h1>
+    <h2 class="hero-title-cn">豫见中原 · 美食与童趣四日</h2>
+    <p class="hero-subtitle">从郑州落地，沿郏县饸饹面的香气南下，在神垕老街听千年窑火的低语；穿过鲁山温泉的氤氲水汽，登老君山的金顶许愿；最终于洛阳老城喝一碗牛肉汤，胖东来的购物车装满归途。</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">4</div>
+        <div class="hero-stat-label">天 / Days</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">5</div>
+        <div class="hero-stat-label">城 / Cities</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">12+</div>
+        <div class="hero-stat-label">豫味 / Tastes</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">人 / People</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Overview ============ -->
+<section id="overview" class="container">
+  <div class="section-header">
+    <div class="section-num">01 · OVERVIEW</div>
+    <h2 class="section-title">Plan at a Glance</h2>
+    <div class="section-title-cn">行 程 总 览</div>
+  </div>
+
+  <div class="cards-grid">
+    <div class="tip-card">
+      <div class="tip-card-num">01</div>
+      <div class="tip-card-title">为什么这样走</div>
+      <div class="tip-card-text">顺时针环线，不走回头路。郑州→郏县→神垕→鲁山→洛阳→许昌→深圳，地理顺畅、错峰精准、节奏从舒缓到紧凑。</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-card-num">02</div>
+      <div class="tip-card-title">错峰策略</div>
+      <div class="tip-card-text">5/4还是法定假期但全在路上，5/5在温泉度假村避峰，5/6节后第一天工作日攻老君山（人流降至假期20%），5/7节后第二天扫胖东来。</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-card-num">03</div>
+      <div class="tip-card-title">交通方式</div>
+      <div class="tip-card-text">全程自驾。郑州东站取车，许昌东站还车。5/1-5/5高速免费蹭末班，后备箱装得下整个胖东来。</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-card-num">04</div>
+      <div class="tip-card-title">核心体验</div>
+      <div class="tip-card-text">三苏园 + 神垕老街 + 鲁山温泉 + 老君山金顶 + 洛阳水席 + 龙门石窟（如有时间） + 胖东来。一站一味，每天不重复。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DAY 1 ============ -->
+<section id="day1" class="container">
+  <div class="day-card">
+    <div class="day-header">
+      <div>
+        <div class="day-label">DAY 01 · 周一 / MON</div>
+        <div class="day-date">May 04</div>
+        <div class="day-theme">三苏园 · 饸饹面 · 神垕窑火</div>
+      </div>
+      <div class="day-route">
+        <div class="day-route-label">ROUTE · 约 280 KM</div>
+        <div class="day-route-line">郑州 → 郏县 → 神垕</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="event">
+          <div class="event-time">07:30</div>
+          <div class="event-content">
+            <div class="event-title">起床，新郑机场酒店退房</div>
+            <div class="event-detail">智选假日酒店 · 含早餐。简单吃饱，9点前出发。</div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">09:00</div>
+          <div class="event-content">
+            <div class="event-title">郑州东站取车 <span class="badge key">关键</span></div>
+            <div class="event-detail">从机场打车到郑州东站约30分钟（¥80），或地铁2号线接城郊线（约45分钟）。在租车点取车后开始自驾全程。</div>
+            <div class="event-meta"><span>📍 郑州东站</span><span>🚗 取车</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">10:00</div>
+          <div class="event-content">
+            <div class="event-title">出发去郏县</div>
+            <div class="event-detail">郑州东站 → 郏县三苏园，约1.5小时车程。京港澳高速→兰南高速。</div>
+            <div class="event-meta"><span>🛣️ 约115公里</span><span>⏱️ 1h30min</span></div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">11:30</div>
+          <div class="event-content">
+            <div class="event-title">郏县三苏园 <span class="badge must">必去</span></div>
+            <div class="event-detail">苏轼、苏辙葬于此，苏洵衣冠冢同侧。给6岁孩子讲"明月几时有"的故事，看看古柏望乡、东坡碑林。1.4米以下儿童免票，成人20元。</div>
+            <div class="event-meta"><span>⏱️ 游玩2小时</span><span>💰 ¥20/人</span></div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">13:30</div>
+          <div class="event-content">
+            <div class="event-title">郏县饸饹面午餐 <span class="badge food">美食</span></div>
+            <div class="event-detail">推荐<strong>张记朝阳饸饹店</strong>（八一路），1400年历史的羊肉饸饹面。建议同时点：郏县烧鸡、豆腐菜、红牛肉。烧鸡可真空打包带走。</div>
+            <div class="event-meta"><span>📍 郏县八一路</span><span>💰 人均¥40</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">15:00</div>
+          <div class="event-content">
+            <div class="event-title">出发去神垕古镇</div>
+            <div class="event-detail">郏县→神垕，约1小时车程。沿途有禹神快速路，景色不错。</div>
+            <div class="event-meta"><span>🛣️ 约45公里</span><span>⏱️ 1h</span></div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">16:00</div>
+          <div class="event-content">
+            <div class="event-title">入住神垕古镇民宿 <span class="badge">住宿</span></div>
+            <div class="event-detail">推荐建业·钧都新天地内的精品民宿，或老街附近的特色客栈。前店中居后坊的传统院落，下方就是七里长街。</div>
+            <div class="event-meta"><span>💰 ¥300-500</span><span>🏠 神垕老街</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">16:30</div>
+          <div class="event-content">
+            <div class="event-title">神垕老街漫步</div>
+            <div class="event-detail">"活着的古镇"——千年窑火不熄。看伯灵翁庙（全国仅存3座半窑神庙之一）、驺虞桥（明代古桥）；逛瓷器店淘小件（10元起的手串、瓶子很多）。如果女儿兴致来了，可付费体验拉坯（¥80-150/人，作品烧制后寄回）。</div>
+            <div class="event-meta"><span>⏱️ 约2.5小时</span><span>🎨 免费门票</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">19:00</div>
+          <div class="event-content">
+            <div class="event-title">神垕窑工菜晚餐 <span class="badge food">美食</span></div>
+            <div class="event-detail">推荐<strong>建业大食堂</strong>或老街上的本地馆子。必尝：豆腐菜、丸子汤、火烧夹肉、禹州十三碗。物价亲民，人均¥40-60。</div>
+            <div class="event-meta"><span>📍 神垕老街</span><span>💰 ¥120-180/3人</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">21:00</div>
+          <div class="event-content">
+            <div class="event-title">回民宿，早睡</div>
+            <div class="event-detail">明早可以睡到自然醒，不赶时间。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="info-box-title">📌 当日要点</div>
+        郏县三苏园不大，2小时玩完正好。如果4号晚到神垕民宿觉得疲惫，可以跳过老街夜逛，改成第二天早晨去——5号早起不算亏。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DAY 2 ============ -->
+<section id="day2" class="container">
+  <div class="day-card">
+    <div class="day-header">
+      <div>
+        <div class="day-label">DAY 02 · 周二 / TUE</div>
+        <div class="day-date">May 05</div>
+        <div class="day-theme">早餐汤 · 温泉补眠 · 度假感</div>
+      </div>
+      <div class="day-route">
+        <div class="day-route-label">ROUTE · 约 100 KM</div>
+        <div class="day-route-line">神垕 → 鲁山县城 → 下汤温泉</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="event">
+          <div class="event-time">08:00</div>
+          <div class="event-content">
+            <div class="event-title">神垕老街早餐 <span class="badge food">美食</span></div>
+            <div class="event-detail">饸饹面或羊肉汤都可。如果昨晚没逛够老街，可以早起再逛半小时。</div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">09:30</div>
+          <div class="event-content">
+            <div class="event-title">出发去鲁山县城</div>
+            <div class="event-detail">神垕→鲁山县城，约1.5小时车程。5月5日是高速免费最后一天。</div>
+            <div class="event-meta"><span>🛣️ 约80公里</span><span>⏱️ 1h30min</span></div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">11:30</div>
+          <div class="event-content">
+            <div class="event-title">鲁山县城豫味早餐（顺延为午餐） <span class="badge food">美食</span></div>
+            <div class="event-detail">这是你心心念念的"鲁山喝汤"环节！推荐：<strong>钢厂路口羊杂汤</strong>（本地人聚集）或<strong>老城门胡辣汤</strong>（鲁山版加粉皮，独特）。配水煎包+油条。</div>
+            <div class="event-meta"><span>📍 鲁山县城</span><span>💰 人均¥25</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">13:00</div>
+          <div class="event-content">
+            <div class="event-title">自驾去下汤温泉小镇</div>
+            <div class="event-detail">鲁山县城→下汤，约30分钟车程。</div>
+            <div class="event-meta"><span>🛣️ 约25公里</span><span>⏱️ 30min</span></div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">13:30</div>
+          <div class="event-content">
+            <div class="event-title">入住皇姑浴温泉酒店 <span class="badge must">核心住宿</span></div>
+            <div class="event-detail">家庭房¥600-900含温泉票。下汤温泉是天然温泉，水温60度，含20多种微量元素，5月初泡正合适。</div>
+            <div class="event-meta"><span>💰 ¥600-900</span><span>🏠 含温泉</span></div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">14:00</div>
+          <div class="event-content">
+            <div class="event-title">温泉度假村全程畅玩</div>
+            <div class="event-detail">这不是单一泡汤，是综合度假村！包括：<br>• 室内外几十种主题汤池（玫瑰汤、牛奶汤、SPA）<br>• 室内温水游泳池（女儿天堂）<br>• 儿童戏水区+浅水滑梯<br>• 中医汗蒸/盐疗房（你和老婆放松）<br>• 棋牌、电影房、亲子乐园</div>
+            <div class="event-meta"><span>⏱️ 4-5小时</span><span>🎯 主题：补眠+解压</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">18:30</div>
+          <div class="event-content">
+            <div class="event-title">鲁山特色晚餐 <span class="badge food">美食</span></div>
+            <div class="event-detail">酒店内或镇上馆子。必点：<strong>鲁山揽锅菜</strong>（一锅端豪迈感十足）+<strong>鲁山牛肉条</strong>+<strong>鲁山豆腐</strong>。揽锅菜是本地名菜，孩子也会喜欢。</div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">20:00</div>
+          <div class="event-content">
+            <div class="event-title">夜泡温泉</div>
+            <div class="event-detail">夜里泡汤最舒服。明天要早起爬老君山，11点前必须睡。</div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">21:30</div>
+          <div class="event-content">
+            <div class="event-title">早睡 <span class="badge key">关键</span></div>
+            <div class="event-detail">明天5:30起床，准时上床！</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="info-box-title">📌 为什么选温泉而不是画眉谷</div>
+        画眉谷的精华是漂流（5月还没开漂），普通峡谷+栈道走着累。温泉是综合度假体验，孩子有戏水区，大人有SPA，家庭友好度满分。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DAY 3 ============ -->
+<section id="day3" class="container">
+  <div class="day-card">
+    <div class="day-header">
+      <div>
+        <div class="day-label">DAY 03 · 周三 / WED</div>
+        <div class="day-date">May 06</div>
+        <div class="day-theme">仙山金顶 · 节后错峰王炸日</div>
+      </div>
+      <div class="day-route">
+        <div class="day-route-label">ROUTE · 约 250 KM</div>
+        <div class="day-route-line">下汤温泉 → 老君山 → 洛阳</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="event event-key">
+          <div class="event-time">06:00</div>
+          <div class="event-content">
+            <div class="event-title">早起+酒店早餐 <span class="badge key">关键</span></div>
+            <div class="event-detail">早起为的是"雨后云海最佳观赏时段（6:30-9:30）"。叫醒女儿前先把行李收好，孩子起床后直接吃早餐出发。</div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">06:30</div>
+          <div class="event-content">
+            <div class="event-title">出发去老君山 <span class="badge key">提前30min</span></div>
+            <div class="event-detail">下汤→栾川老君山，约150公里。<strong>注意：中段国道311是山路（经画眉谷、木札岭、车村），实际车程2.5-3小时</strong>。慢开稳重，孩子可以补觉。</div>
+            <div class="event-meta"><span>🛣️ 约150公里</span><span>⏱️ 2.5-3h</span></div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">09:30</div>
+          <div class="event-content">
+            <div class="event-title">直接开车进景区 <span class="badge must">王炸日</span></div>
+            <div class="event-detail">5月6日是节后第一天工作日，人流量约为五一假期的20%，几乎不用排队。<strong>自驾优势：网上提前买好套票，凭二维码直接开车通过检票站，省掉电瓶车¥45+30分钟</strong>。</div>
+            <div class="event-meta"><span>💰 套票290/大人</span><span>👶 1.4m以下全免</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">09:45</div>
+          <div class="event-content">
+            <div class="event-title">停13号停车场 <span class="badge">自驾Tip</span></div>
+            <div class="event-detail">蓝牌车¥10/次不限时长。13号停车场离一级索道最近（本地老司机推荐）。直接下车走几步就到索道入口。</div>
+            <div class="event-meta"><span>💰 ¥10停车费</span><span>📍 索道下方</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">10:00</div>
+          <div class="event-content">
+            <div class="event-title">中灵索道→中天门→峰林索道</div>
+            <div class="event-detail">两段索道无缝衔接。一级索道（中灵或云景）从山下到中天门约10分钟，二级索道（峰林）从中天门到山顶十里画屏入口约8分钟。</div>
+            <div class="event-meta"><span>🚡 双索道无缝</span><span>⏱️ 共25min</span></div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">10:45</div>
+          <div class="event-content">
+            <div class="event-title">十里画屏 + 马鬃岭 + 玻璃观景台</div>
+            <div class="event-detail">老君山的核心景观带。世界最大花岗岩滑脱峰林地貌，栈道一挪一景。马鬃岭是观景最佳点，可眺望伏牛山主峰；玻璃观景台拍照打卡（额外¥50/人，可选）。</div>
+            <div class="event-meta"><span>⏱️ 约2小时</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">12:30</div>
+          <div class="event-content">
+            <div class="event-title">山顶午餐 <span class="badge food">美食</span></div>
+            <div class="event-detail">山顶有咖啡店、奶茶店、餐厅。推荐<strong>"老君山泡面"网红体验</strong>（带开水¥12/份）——女儿会觉得新奇有趣，配栾川豆腐。可乐¥6一瓶（比华山良心多了）。</div>
+            <div class="event-meta"><span>💰 人均¥40</span></div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">13:30</div>
+          <div class="event-content">
+            <div class="event-title">金顶道观群 + 许愿带 <span class="badge must">必体验</span></div>
+            <div class="event-detail">五母金殿、亮宝台、玉皇顶——明清皇家宫殿式建筑，金顶覆盖。给女儿系一条<strong>许愿带</strong>，全家在金顶许愿——这是这趟最有仪式感的环节。</div>
+            <div class="event-meta"><span>⏱️ 约2小时</span><span>🌟 仪式感</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">15:30</div>
+          <div class="event-content">
+            <div class="event-title">下山</div>
+            <div class="event-detail">原路索道下山。如果时间允许，到中天门后可看舍身崖+玻璃栈道。下山到停车场约16:30。</div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">16:30</div>
+          <div class="event-content">
+            <div class="event-title">自驾去洛阳</div>
+            <div class="event-detail">栾川老君山→洛阳老城，约2小时车程。走洛栾高速→二广高速→洛阳出口。孩子大概率车上睡着。</div>
+            <div class="event-meta"><span>🛣️ 约140公里</span><span>⏱️ 2h</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">18:30</div>
+          <div class="event-content">
+            <div class="event-title">入住洛阳老城酒店</div>
+            <div class="event-detail">推荐丽景门附近的<strong>亚朵</strong>或<strong>桔子水晶</strong>。靠近水席店和洛邑古城，步行即达。先放行李快速洗漱。</div>
+            <div class="event-meta"><span>💰 ¥400-600</span><span>🏠 老城丽景门</span></div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">19:30</div>
+          <div class="event-content">
+            <div class="event-title">真不同水席总店 <span class="badge food">美食</span> <span class="badge must">必去</span></div>
+            <div class="event-detail">洛阳老字号，中州东路369号。<strong>建议提前订座</strong>。<br>必点5道：<strong>牡丹燕菜</strong>（必）+连汤肉片+焦炸丸子+小酥肉+西辣鱼。<br>⚠️ 千万不要点全套24道——3人吃不完，且口味偏咸偏酸孩子吃不惯。</div>
+            <div class="event-meta"><span>💰 ¥250-350/3人</span><span>📞 提前订座</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">21:00</div>
+          <div class="event-content">
+            <div class="event-title">洛邑古城夜游 <span class="badge must">推荐</span></div>
+            <div class="event-detail">免费，夜景比白天美。<strong>给女儿租一套唐风童装</strong>（¥80-120/套，店家送发饰），文峰塔下拍照超出片。古城内有皮影戏、傀儡戏小演出。</div>
+            <div class="event-meta"><span>💰 服装¥80-120</span><span>📸 拍照圣地</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">22:30</div>
+          <div class="event-content">
+            <div class="event-title">回酒店休息</div>
+            <div class="event-detail">明天还要赶路+扫货，11点前睡。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box warn-box">
+        <div class="info-box-title">⚠️ 雨天备案</div>
+        如果5月6日老君山有大雨，索道会受影响。备案A：改去栾川重渡沟（雨天反而更美）；备案B：直接洛阳龙门石窟+博物馆（全室内）。出发前48小时关注天气预报。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DAY 4 ============ -->
+<section id="day4" class="container">
+  <div class="day-card">
+    <div class="day-header">
+      <div>
+        <div class="day-label">DAY 04 · 周四 / THU</div>
+        <div class="day-date">May 07</div>
+        <div class="day-theme">早晨牛肉汤 · 胖东来9小时 · 返深</div>
+      </div>
+      <div class="day-route">
+        <div class="day-route-label">ROUTE · 约 200 KM 自驾 + 高铁</div>
+        <div class="day-route-line">洛阳 → 许昌（还车）→ 深圳</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="event">
+          <div class="event-time">07:00</div>
+          <div class="event-content">
+            <div class="event-title">起床+收拾行李</div>
+            <div class="event-detail">把神垕淘的瓷器、郏县烧鸡都打包好，等下要装满胖东来的战利品。</div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">07:30</div>
+          <div class="event-content">
+            <div class="event-title">洛阳老城牛肉汤 <span class="badge food">美食</span> <span class="badge must">仪式感</span></div>
+            <div class="event-detail">这是洛阳早晨的灵魂！推荐：<br>• <strong>马杰山牛肉汤</strong>（瀍河区，老字号）<br>• <strong>铁谢李海羊肉汤</strong>（孟津，但要稍远）<br>• 老城内的<strong>不翻汤+小街锅贴</strong><br>配饼丝泡进去，孩子也会爱上。</div>
+            <div class="event-meta"><span>💰 人均¥20</span><span>🥣 头汤最好</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">08:00</div>
+          <div class="event-content">
+            <div class="event-title">退房，自驾去许昌 <span class="badge key">避早高峰</span></div>
+            <div class="event-detail">洛阳→许昌东站附近，约160公里2小时高速。⚠️ <strong>8点出发避开洛阳市区早高峰末段</strong>。<br>⚠️ <strong>不绕路龙门石窟</strong>——节后周四开门时间还得排队，且这天主线是返程+采购。</div>
+            <div class="event-meta"><span>🛣️ 约160公里</span><span>⏱️ 2h</span></div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">10:00</div>
+          <div class="event-content">
+            <div class="event-title">许昌东站还车 <span class="badge key">关键</span></div>
+            <div class="event-detail">在租车点办理还车手续，约30分钟。建议预留时间检查车况、加满油。</div>
+            <div class="event-meta"><span>📍 许昌东站</span><span>🚗 还车</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">10:30</div>
+          <div class="event-content">
+            <div class="event-title">打车去胖东来时代广场</div>
+            <div class="event-detail">许昌东站到时代广场约10分钟，¥15。先到许昌东站存大件行李（¥10-20/件），轻装上阵。</div>
+            <div class="event-meta"><span>📍 许昌魏都区七一路277号</span></div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">11:00</div>
+          <div class="event-content">
+            <div class="event-title">胖东来时代广场扫货 <span class="badge must">压轴</span></div>
+            <div class="event-detail"><strong>第一步：到一楼服务台办会员卡</strong>（带身份证免费当场办，立刻能用）<br><br><strong>采购清单建议：</strong><br>• <strong>负一层超市</strong>：自营烘焙（红丝绒蛋糕、芋泥紫米罐、伯爵红茶卷）、自营茶叶、自营调味料、护肤、孩子零食<br>• <strong>五楼美食广场</strong>：午餐<strong>麻辣香锅+烙馍卷菜+酸奶</strong>，下午茶买烘焙<br>• <strong>一楼</strong>：胖东来黄金、翡翠、茶叶超市<br>• <strong>下午茶</strong>：买面包，第二天到家还能吃<br><br>5/7是节后周四，人流正常但仍需30-40分钟排队结账，<strong>提前40分钟去结账</strong>。</div>
+            <div class="event-meta"><span>⏱️ 6小时充足</span><span>🛒 备空行李箱</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">17:10</div>
+          <div class="event-content">
+            <div class="event-title">离开胖东来，回许昌东站</div>
+            <div class="event-detail">打车10分钟到许昌东站，取出寄存的大件行李。把胖东来战利品打包合并。</div>
+          </div>
+        </div>
+        <div class="event event-key">
+          <div class="event-time">17:50</div>
+          <div class="event-content">
+            <div class="event-title">许昌东 → 深圳北 高铁 <span class="badge key">返程</span></div>
+            <div class="event-detail">建议乘<strong>17:50-18:30间发车</strong>的G字头列车，京广高铁约6小时直达。<br>具体车次需在12306查询5月7日实际班次（参考：G79、G81、G279等南下班次途经许昌东）。<br>预计深圳北到达约23:50-00:30，正好你说的"晚上12点左右到深圳"。</div>
+            <div class="event-meta"><span>💰 ¥600-700/人</span><span>⏱️ 约6小时</span></div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">00:00</div>
+          <div class="event-content">
+            <div class="event-title">抵达深圳北 🏠</div>
+            <div class="event-detail">打车回家，结束这趟豫见之旅。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="info-box-title">📌 胖东来扫货 Tips</div>
+        • 周二闭店：时代广场、生活广场、人民店、劳动店——<strong>5月7日是周四，时代广场正常营业</strong> 9:30-21:00<br>
+        • 现场办会员卡：带身份证，免费，5分钟搞定，立刻能用<br>
+        • 必买清单：自营烘焙、自营茶叶、自营调料、自营护肤、烘焙红丝绒蛋糕<br>
+        • 后备箱（行李箱）容量是上限，建议带空大箱+大背包
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Day 0 - Arrival ============ -->
+<section class="container">
+  <div class="day-card">
+    <div class="day-header" style="background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-light) 100%);">
+      <div>
+        <div class="day-label">DAY 00 · 周六 / SAT · 抵达</div>
+        <div class="day-date">May 03</div>
+        <div class="day-theme">CA1915 落地郑州</div>
+      </div>
+      <div class="day-route">
+        <div class="day-route-label">ARRIVAL</div>
+        <div class="day-route-line">北京首都T3 → 新郑机场T2</div>
+      </div>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="event">
+          <div class="event-time">21:05</div>
+          <div class="event-content">
+            <div class="event-title">CA1915 北京首都T3 起飞</div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">22:50</div>
+          <div class="event-content">
+            <div class="event-title">落地郑州新郑机场T2</div>
+            <div class="event-detail">取行李、出航站楼。如果国内航班顺利，整个过程约30分钟。</div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="event-time">23:30</div>
+          <div class="event-content">
+            <div class="event-title">入住智选假日酒店（机场店）</div>
+            <div class="event-detail">机场附近，距离T2约5分钟车程。酒店通常有免费接驳车，或打车¥20。直接休息，明天早起出发。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Checklist Section ============ -->
+<section id="checklist" class="checklist-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">02 · ACTION ITEMS</div>
+      <h2 class="section-title">Pre-Trip Checklist</h2>
+      <div class="section-title-cn">出 发 前 待 办</div>
+    </div>
+
+    <div class="progress-bar-container">
+      <div class="progress-stats">
+        <div class="progress-text">
+          已完成 <strong id="progress-done">0</strong> / <strong id="progress-total">14</strong> 项
+        </div>
+        <div class="progress-text" id="progress-percent">0%</div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- 立即做 -->
+    <div class="checklist-group">
+      <h3 class="checklist-group-title">🔴 今天必做（5/3前完成）</h3>
+      <div class="checklist-group-sub">越早订越便宜，订完才放心</div>
+
+      <div class="checklist-item" data-id="task1">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-urgent">紧急</span>
+            订5月7日 许昌东→深圳北 高铁票（17:30-18:30间发车）
+          </div>
+          <div class="checklist-meta">
+            <span class="deadline">⏰ 越早越便宜</span>
+            <span>📱 12306 / 携程</span>
+            <span>💰 约¥600-700/人</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="checklist-item" data-id="task2">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-urgent">紧急</span>
+            订5月6日老君山套票（门票+双索道双程，省¥40）
+          </div>
+          <div class="checklist-meta">
+            <span class="deadline">⏰ 5/3起可订（提前3天）</span>
+            <span>📱 公众号"老君山风景名胜"</span>
+            <span>💰 ¥290/大人套票</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="checklist-item" data-id="task3">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-urgent">紧急</span>
+            订租车：郑州东站取车 + 许昌东站还车（4天）
+          </div>
+          <div class="checklist-meta">
+            <span class="deadline">⏰ 越早越便宜</span>
+            <span>📱 神州/一嗨/携程比价</span>
+            <span>💰 约¥800-1200含异地还车</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="checklist-item" data-id="task4">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-urgent">紧急</span>
+            订4晚酒店（D1-D4住宿）
+          </div>
+          <div class="checklist-meta">
+            <span class="deadline">⏰ 24小时内</span>
+            <span>📱 携程/飞猪</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 24小时内做 -->
+    <div class="checklist-group">
+      <h3 class="checklist-group-title">🟡 24小时内</h3>
+      <div class="checklist-group-sub">让行程更顺滑</div>
+
+      <div class="checklist-item" data-id="task5">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-soon">优先</span>
+            订神垕老街民宿（5/4晚）
+          </div>
+          <div class="checklist-meta">
+            <span>💰 ¥300-500</span>
+            <span>📱 搜"神垕古镇民宿"</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="checklist-item" data-id="task6">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-soon">优先</span>
+            订鲁山下汤温泉皇姑浴酒店（5/5晚，含温泉票）
+          </div>
+          <div class="checklist-meta">
+            <span>💰 ¥600-900家庭房</span>
+            <span>📱 携程/电话</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="checklist-item" data-id="task7">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-soon">优先</span>
+            订洛阳老城酒店（5/6晚，丽景门附近）
+          </div>
+          <div class="checklist-meta">
+            <span>💰 ¥400-600</span>
+            <span>📱 亚朵/桔子水晶</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="checklist-item" data-id="task8">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-soon">优先</span>
+            打电话给真不同水席总店预订5/6晚19:00座位
+          </div>
+          <div class="checklist-meta">
+            <span>📞 中州东路369号</span>
+            <span>👨‍👩‍👧 3人座</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 出发前 -->
+    <div class="checklist-group">
+      <h3 class="checklist-group-title">🟢 出发前1天</h3>
+      <div class="checklist-group-sub">最后准备清单</div>
+
+      <div class="checklist-item" data-id="task9">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-normal">常规</span>
+            刷5月6日老君山天气预报（关注降雨概率，启动雨天备案）
+          </div>
+          <div class="checklist-meta">
+            <span>📱 中国天气网</span>
+            <span>⚠️ 雨天改去重渡沟或龙门石窟</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="checklist-item" data-id="task10">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-normal">常规</span>
+            准备空行李箱（给胖东来扫货用）
+          </div>
+          <div class="checklist-meta">
+            <span>🧳 24-28寸大箱</span>
+            <span>+大背包</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="checklist-item" data-id="task11">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-normal">常规</span>
+            准备老君山保暖衣物（薄羽绒/抓绒，孩子尤其重要）
+          </div>
+          <div class="checklist-meta">
+            <span>🧥 山顶15-20°C</span>
+            <span>有风感觉冷</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="checklist-item" data-id="task12">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-normal">常规</span>
+            备小额现金（小吃摊不一定都支持移动支付）
+          </div>
+          <div class="checklist-meta">
+            <span>💵 ¥200-300</span>
+            <span>主要在郏县、神垕、鲁山乡镇</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="checklist-item" data-id="task13">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-normal">常规</span>
+            高德/百度地图下载河南离线地图
+          </div>
+          <div class="checklist-meta">
+            <span>📍 郑州+洛阳+平顶山</span>
+            <span>山区信号可能弱</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="checklist-item" data-id="task14">
+        <div class="checklist-checkbox"></div>
+        <div class="checklist-content">
+          <div class="checklist-text">
+            <span class="priority-tag priority-normal">常规</span>
+            女儿装备：小水壶、零食、防晒帽、湿巾、备用衣物
+          </div>
+          <div class="checklist-meta">
+            <span>👧 6岁配置</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="reset-btn" onclick="resetChecklist()">↻ 重置全部任务</button>
+  </div>
+</section>
+
+<!-- ============ Quick Reference ============ -->
+<section id="reference" class="quick-ref">
+  <div class="container">
+    <div class="section-header" style="margin-bottom: 40px;">
+      <div class="section-num">03 · QUICK REFERENCE</div>
+      <h2 class="section-title">Travel Cheat Sheet</h2>
+      <div class="section-title-cn">速 查 卡 片</div>
+    </div>
+
+    <div class="quick-ref-grid">
+      <div class="quick-ref-item">
+        <h4>预算估算（3人）</h4>
+        <ul>
+          <li><span>租车4天</span><span class="ref-val">¥1000</span></li>
+          <li><span>过路费+油费</span><span class="ref-val">¥800</span></li>
+          <li><span>酒店4晚</span><span class="ref-val">¥2400</span></li>
+          <li><span>门票+索道(套票)</span><span class="ref-val">¥580</span></li>
+          <li><span>吃饭4天</span><span class="ref-val">¥1500</span></li>
+          <li><span>胖东来扫货</span><span class="ref-val">¥1000-3000</span></li>
+          <li><span>高铁返程</span><span class="ref-val">¥1800</span></li>
+          <li><strong>总计</strong><span class="ref-val">¥9000-11000</span></li>
+        </ul>
+      </div>
+
+      <div class="quick-ref-item">
+        <h4>各日车程</h4>
+        <ul>
+          <li><span>D1 郑州→郏县</span><span class="ref-val">115km · 1.5h</span></li>
+          <li><span>D1 郏县→神垕</span><span class="ref-val">45km · 1h</span></li>
+          <li><span>D2 神垕→鲁山</span><span class="ref-val">80km · 1.5h</span></li>
+          <li><span>D2 鲁山→下汤</span><span class="ref-val">25km · 30min</span></li>
+          <li><span>D3 下汤→老君山</span><span class="ref-val">150km · 2.5-3h</span></li>
+          <li><span>D3 老君山→洛阳</span><span class="ref-val">140km · 2h</span></li>
+          <li><span>D4 洛阳→许昌</span><span class="ref-val">160km · 2h</span></li>
+        </ul>
+      </div>
+
+      <div class="quick-ref-item">
+        <h4>必尝美食</h4>
+        <ul>
+          <li><span>D1 郏县饸饹面</span><span class="ref-val">张记朝阳</span></li>
+          <li><span>D1 神垕窑工菜</span><span class="ref-val">建业大食堂</span></li>
+          <li><span>D2 鲁山胡辣汤</span><span class="ref-val">老城门</span></li>
+          <li><span>D2 鲁山揽锅菜</span><span class="ref-val">下汤镇上</span></li>
+          <li><span>D3 老君山泡面</span><span class="ref-val">山顶</span></li>
+          <li><span>D3 洛阳水席</span><span class="ref-val">真不同总店</span></li>
+          <li><span>D4 洛阳牛肉汤</span><span class="ref-val">马杰山</span></li>
+        </ul>
+      </div>
+
+      <div class="quick-ref-item">
+        <h4>关键提醒</h4>
+        <ul>
+          <li><span>胖东来周二闭店</span><span class="ref-val">5/7周四正常</span></li>
+          <li><span>胖东来会员卡</span><span class="ref-val">现场办免费</span></li>
+          <li><span>老君山预约</span><span class="ref-val">提前3天起</span></li>
+          <li><span>老君山停车</span><span class="ref-val">13号场最近</span></li>
+          <li><span>老君山自驾省</span><span class="ref-val">¥45+30min</span></li>
+          <li><span>高速免费截止</span><span class="ref-val">5/5 24:00</span></li>
+          <li><span>水席预订</span><span class="ref-val">提前打电话</span></li>
+          <li><span>真不同别点全套</span><span class="ref-val">5道菜够3人</span></li>
+        </ul>
+      </div>
+
+      <div class="quick-ref-item">
+        <h4>雨天备案</h4>
+        <ul>
+          <li><span>老君山下大雨</span><span class="ref-val">→ 重渡沟</span></li>
+          <li><span>极端天气</span><span class="ref-val">→ 龙门石窟</span></li>
+          <li><span>全程暴雨</span><span class="ref-val">→ 河南博物院</span></li>
+          <li><span>温泉日下雨</span><span class="ref-val">影响不大</span></li>
+        </ul>
+      </div>
+
+      <div class="quick-ref-item">
+        <h4>女儿专属</h4>
+        <ul>
+          <li><span>D1 三苏园讲故事</span><span class="ref-val">明月几时有</span></li>
+          <li><span>D1 神垕看做瓷</span><span class="ref-val">可拉坯体验</span></li>
+          <li><span>D2 温泉戏水区</span><span class="ref-val">儿童滑梯</span></li>
+          <li><span>D3 金顶许愿带</span><span class="ref-val">仪式感</span></li>
+          <li><span>D3 洛邑唐风童装</span><span class="ref-val">¥80-120</span></li>
+          <li><span>D4 胖东来零食</span><span class="ref-val">尽情挑</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer>
+  <div>
+    河南行程 · 2026.05.03 — 05.07
+    <span class="seal">◆</span>
+    一家三口
+    <span class="seal">◆</span>
+    豫见中原
+  </div>
+  <div style="margin-top: 8px; opacity: 0.5; font-size: 0.7rem;">
+    Generated for Will · Last updated: 2026-04-29
+  </div>
+</footer>
+
+<script>
+// ============ Checklist State Management ============
+const STORAGE_KEY = 'henan-trip-2026-checklist';
+
+async function loadState() {
+  try {
+    const result = await window.storage.get(STORAGE_KEY);
+    return result ? JSON.parse(result.value) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+async function saveState(state) {
+  try {
+    await window.storage.set(STORAGE_KEY, JSON.stringify(state));
+  } catch (e) {
+    console.error('Save failed:', e);
+  }
+}
+
+let checklistState = {};
+
+async function initChecklist() {
+  checklistState = await loadState();
+  const items = document.querySelectorAll('.checklist-item');
+  
+  items.forEach(item => {
+    const id = item.dataset.id;
+    if (checklistState[id]) {
+      item.classList.add('completed');
+    }
+    
+    item.addEventListener('click', async () => {
+      const itemId = item.dataset.id;
+      item.classList.toggle('completed');
+      checklistState[itemId] = item.classList.contains('completed');
+      await saveState(checklistState);
+      updateProgress();
+    });
+  });
+  
+  updateProgress();
+}
+
+function updateProgress() {
+  const items = document.querySelectorAll('.checklist-item');
+  const completed = document.querySelectorAll('.checklist-item.completed').length;
+  const total = items.length;
+  const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
+  
+  document.getElementById('progress-done').textContent = completed;
+  document.getElementById('progress-total').textContent = total;
+  document.getElementById('progress-percent').textContent = percent + '%';
+  document.getElementById('progress-fill').style.width = percent + '%';
+  document.getElementById('topbar-progress').textContent = `待办: ${completed} / ${total}`;
+}
+
+async function resetChecklist() {
+  if (!confirm('确定要重置所有任务吗？已勾选的项目将被清除。')) return;
+  checklistState = {};
+  await saveState(checklistState);
+  document.querySelectorAll('.checklist-item').forEach(item => {
+    item.classList.remove('completed');
+  });
+  updateProgress();
+}
+
+// Init on load
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof window.storage !== 'undefined') {
+    initChecklist();
+  } else {
+    // Fallback to localStorage
+    const items = document.querySelectorAll('.checklist-item');
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      checklistState = JSON.parse(stored);
+    }
+    items.forEach(item => {
+      const id = item.dataset.id;
+      if (checklistState[id]) {
+        item.classList.add('completed');
+      }
+      item.addEventListener('click', () => {
+        item.classList.toggle('completed');
+        checklistState[item.dataset.id] = item.classList.contains('completed');
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(checklistState));
+        updateProgress();
+      });
+    });
+    updateProgress();
+  }
+});
+
+// Smooth scroll behavior for nav
+document.querySelectorAll('.topbar-nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+</body>
+</html>
